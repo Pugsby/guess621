@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess621</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="g621.svg" type="image/x-icon">
+</head>
+<body>
+    <h1 class="centerText">Guess621 <img src="g621.svg" height="32px"></h1>
+    <p id="tutorial" class="centerText">Welcome to Guess621. The goal of this game is to tell the difference between a Safe image or a Questionable image.<br><br><a onclick="playAgain()">Play?</a>
+    <br><br>[WARNING ⚠️] There WILL be questionable images of furries in this game. If you don't want to see those, don't play this game.<br><br>
+    <a onclick="openSettings()">Settings</a></p>
+    <div id="image" class="centerImage"></div>
+    <p class="centerText" id="ask" style="display: none;">Is this image<br><br>
+        <a onclick="optionAPicked()" id="optionA">A</a> or 
+        <a onclick="optionBPicked()" id="optionB">B</a>?
+    </p>
+    <p id="chosen" style="display: none" class="centerText">You were <b id="correctOrIncorrect">____</b> <a onclick="playAgain()">Play again?</a><br><br>Artist: <b id="artist"></b><br>Link: <a id="link"></a><br><br><a onclick="openSettings()">Settings</a></p>
+    <p class="centerText" style="display: none;" id="settings">Images of: <input id="charQuery" type="text"><br>
+        Extra query: <input id="extraQuery"><br>
+        Choose between <input id="optionAInput"> and <input id="optionBInput"><br>
+        Option A Text: <input id="optionAText">, Option B Text: <input id="optionBText"><br>
+        Limit <i style="font-size: xx-small;">(Don't set too low, don't set too high, increase depending on how popular your character is)</i>: <input type="text" id="roster"></input><br><br>
+        <a onclick="resetSettings()">Reset to defaults</a></p>
+    <script src="main.js"></script>
+</body>
+</html>
